@@ -1,0 +1,70 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Dummy Image -->
+    <ImageView
+        android:id="@+id/dummyImage"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/dummy" />
+
+    <!-- T-Shirt Overlay -->
+    <ImageView
+        android:id="@+id/tshirtImage"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:scaleType="centerInside"
+        android:visibility="visible" />
+
+    <!-- RecyclerView for T-Shirts -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tshirtRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="99dp"
+        android:orientation="horizontal" />
+
+    <!-- Shirt Details -->
+    <LinearLayout
+        android:id="@+id/shirtDetailsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tshirtRecyclerView"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Shirt Name -->
+        <TextView
+            android:id="@+id/shirtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shirt Name"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Shirt Description -->
+        <TextView
+            android:id="@+id/shirtDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shirt Description"
+            android:textSize="16sp" />
+
+        <!-- Shirt Size -->
+        <TextView
+            android:id="@+id/shirtSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Size: M"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
